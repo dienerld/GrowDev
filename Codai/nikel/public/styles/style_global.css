@@ -6,3 +6,21 @@
 .link-default:hover {
   color: #4c79d3;
 }
+
+.primary-color {
+  color: #4e0070;
+}
+.secondary-color {
+  color: #4c79d3;
+}
+
+.btn-default {
+  border-radius: 10px;
+  background: #4e0070;
+  color: #fff;
+}
+
+.btn-default:hover {
+  background-color: #4c79d3;
+  color: #fff;
+}

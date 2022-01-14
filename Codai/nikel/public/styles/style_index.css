@@ -14,14 +14,6 @@
 }
 
 .btn-login {
-  background-color: #4e0070;
-  border-radius: 10px;
-  color: #fff;
   width: 50%;
   margin: 0 25%;
-}
-
-.btn-login:hover {
-  background-color: #4c79d3;
-  color: #fff;
 }
