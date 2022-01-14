@@ -1,0 +1,5 @@
+.bg-sky {
+  background: url('../images/blue-sky-and-clouds-watercolor-texture-background.jpg')
+    center bottom no-repeat;
+  background-size: cover;
+}
