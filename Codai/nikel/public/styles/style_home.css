@@ -1,0 +1,21 @@
+#home {
+  background: linear-gradient(120deg, #fff 44.9%, #4c79d3 45%) fixed no-repeat;
+}
+
+header {
+  border-bottom: 1px solid #bebcbc;
+  padding: 5px;
+  background: #fff;
+}
+
+.icon-detail {
+  font-size: 50px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.info {
+  background-color: #fff;
+  border-radius: 10px;
+  padding-top: 20px;
+}
