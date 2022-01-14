@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url('../images/blue-sky-and-clouds-watercolor-texture-background.jpg')
+    no-repeat fixed center top;
+}
+header {
+  background-color: black;
+  color: white;
+  padding: 25;
+}
+main {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+h1 {
+  text-align: center;
+}
+footer {
+  background-color: black;
+  color: white;
+  padding: 25;
+  margin-top: 25px;
+  font-size: 25px;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+#title-1 {
+  color: lightgray;
+}
+
+.paragraph {
+  font-size: 20px;
+}
+.bg-white {
+  background-color: rgba(255, 255, 255, 0.843);
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.table,
+td,
+th,
+tr {
+  width: 500px;
+  border: 1px solid #ccc;
+}
