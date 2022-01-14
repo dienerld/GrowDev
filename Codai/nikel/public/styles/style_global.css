@@ -1,0 +1,8 @@
+.link-default {
+  color: #4e0070;
+  cursor: pointer;
+}
+
+.link-default:hover {
+  color: #4c79d3;
+}
