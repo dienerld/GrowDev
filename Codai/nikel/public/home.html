@@ -81,7 +81,7 @@
     </header>
     <main>
       <div class="container-lg">
-        <!-- Row header -->
+        <!-- Row header/title -->
         <div class="row">
           <!-- Col total value -->
           <div class="col d-flex mt-4 justify-content-start align-items-center">
@@ -128,36 +128,178 @@
                 <!-- End Line separation -->
               </div>
               <!-- End Row header infos-->
+              <!-- Row table -->
               <div class="row">
                 <div class="col-6">
                   <!-- Container receivables -->
                   <div class="container">
-                    <div class="row"><div class="col">R$ 1000</div></div>
+                    <!-- Row receivables -->
+                    <div class="row" id="value-receivables">
+                      <div class="col fs-3">R$ 1000</div>
+                      <!-- Div Description -->
+                      <div class="row">
+                        <div class="col d-flex justify-content-between">
+                          <span class="span-description">Freela</span>
+                          <span class="span-description">20/10/2021</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End Row receivables -->
                   </div>
                   <!-- End Container receivables -->
                 </div>
+
                 <div class="col-6">
-                  <!-- Container 	Expenditures -->
+                  <!-- Container 	Expenses -->
                   <div class="container">
-                    <div class="row"><div class="col">R$ -1000</div></div>
+                    <div class="row mb-3" id="value-expenses">
+                      <div class="col fs-3">R$ 200</div>
+                      <!-- Div Description -->
+                      <div class="row">
+                        <div class="col d-flex justify-content-between">
+                          <span class="span-description">Gasolina</span>
+                          <span class="span-description">21/12/2021</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <!-- End Container 	Expenditures -->
-                <div class="col-12">
+                <!-- End Container 	Expenses -->
+
+                <div class="col-12 mb-3">
                   <button type="button" class="btn btn-default">
                     Ver mais
                   </button>
                 </div>
+                <!--  -->
               </div>
+              <!-- End Row table -->
             </div>
             <!-- End Container infos -->
           </div>
         </div>
-        <!-- End Row infos -->
+        <!-- End Row header/title -->
+
+        <!-- Button Float for modal -->
+        <button
+          class="btn btn-float"
+          data-bs-target="#transaction-modal"
+          data-bs-toggle="modal"
+        >
+          <i class="bi bi-plus"></i>
+        </button>
       </div>
       <!-- End Container-lg -->
 
-      <!-- Modal Create Account -->
+      <!-- Modal Create Transition -->
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="transaction-modal"
+        tabindex="-1"
+        aria-labelledby="transaction-modal-label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <!-- Modal Header -->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="transaction-modal-label">
+                Adicionar Lançamento
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <!-- End Modal Header -->
+
+            <!-- Form / Modal Form -->
+            <form id="transaction-form">
+              <!-- Div Input Value -->
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="value-input" class="form-label">Valor</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="value-input"
+                    aria-describedby="emailHelp"
+                  />
+                </div>
+
+                <!-- Div Input Description -->
+                <div class="mb-3">
+                  <label for="description-input" class="form-label">
+                    Descrição
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="description-input"
+                  />
+                </div>
+
+                <!-- Div Input Date -->
+                <div class="mb-3">
+                  <label for="date-input" class="form-label"> Data </label>
+                  <input type="date" class="form-control" id="date-input" />
+                </div>
+
+                <!-- Option receivables or expenses -->
+                <div class="mb-3">
+                  <!-- Div Input-radio receivables  -->
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="type-transaction"
+                      id="radio-receivables"
+                      value="1"
+                      checked
+                    />
+                    <label class="form-check-label" for="radio-receivables">
+                      Entrada
+                    </label>
+                  </div>
+
+                  <!-- Div Input-radio Expenses-->
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="type-transaction"
+                      id="radio-expenses"
+                      value="2"
+                    />
+                    <label class="form-check-label" for="radio-expenses">
+                      Saída
+                    </label>
+                  </div>
+                </div>
+                <!-- End Options -->
+              </div>
+              <!-- End Modal Form -->
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-cancel"
+                  data-bs-dismiss="modal"
+                >
+                  Cancelar
+                </button>
+                <button type="submit" class="btn btn-default">Adicionar</button>
+              </div>
+              <!-- End Modal Footer -->
+            </form>
+            <!-- End Form  -->
+          </div>
+        </div>
+      </div>
     </main>
     <!-- Script Bootstrap -->
     <script

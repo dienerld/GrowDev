@@ -19,3 +19,26 @@ header {
   border-radius: 10px;
   padding-top: 20px;
 }
+
+.btn-float {
+  border-radius: 100%;
+  height: 60px;
+  width: 60px;
+  position: fixed;
+  padding: 0 !important;
+  bottom: 1rem;
+  right: 2rem;
+  font-size: 35px;
+  background-color: #4e0070;
+  color: #fff;
+  border: 2px solid #4e0070;
+}
+
+.btn-float:hover {
+  border: 2px solid #4c79d3;
+  background-color: #fff;
+  color: #4c79d3;
+}
+.span-description {
+  font-size: 14px;
+}
