@@ -59,13 +59,13 @@
                 <div class="col">
                   <form>
                     <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label"
+                      <label for="email-login-input" class="form-label"
                         >Email</label
                       >
                       <input
                         type="email"
                         class="form-control"
-                        id="exampleInputEmail1"
+                        id="email-login-input"
                         aria-describedby="emailHelp"
                       />
                       <div id="emailHelp" class="form-text">
@@ -73,22 +73,22 @@
                       </div>
                     </div>
                     <div class="mb-3">
-                      <label for="exampleInputPassword1" class="form-label"
+                      <label for="password-login-input" class="form-label"
                         >Senha</label
                       >
                       <input
                         type="password"
                         class="form-control"
-                        id="exampleInputPassword1"
+                        id="password-login-input"
                       />
                     </div>
                     <div class="mb-3 form-check">
                       <input
                         type="checkbox"
                         class="form-check-input"
-                        id="exampleCheck1"
+                        id="stay-connected"
                       />
-                      <label class="form-check-label" for="exampleCheck1"
+                      <label class="form-check-label" for="stay-connected"
                         >Permanecer logado</label
                       >
                     </div>
@@ -104,7 +104,13 @@
                 <div class="col">
                   <p class="text-center mt-2 form-text">
                     Ainda não tem conta?
-                    <span class="link-default">Criar uma conta</span>.
+                    <!-- trigger modal -->
+                    <span
+                      class="link-default"
+                      data-bs-toggle="modal"
+                      data-bs-target="#register-modal"
+                      >Criar uma conta</span
+                    >.
                   </p>
                 </div>
               </div>
@@ -128,6 +134,89 @@
           </div>
         </div>
       </div>
+
+      <!-- Modal Create Account -->
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="register-modal"
+        tabindex="-1"
+        aria-labelledby="register-modal-label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <!-- Modal Header -->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="register-modal-label">Criar Conta</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <!-- End Modal Header -->
+            <!-- Form / Modal Form -->
+            <form id="create-form">
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="email-create-input" class="form-label"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email-create-input"
+                    aria-describedby="emailHelp"
+                  />
+                  <div id="emailHelp" class="form-text">
+                    Utilize seu email para criar conta.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="password-create-input" class="form-label"
+                    >Senha</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password-create-input"
+                  />
+                  <div id="passwordHelp" class="form-text">
+                    Anote sua senha para não esquecer.
+                  </div>
+                </div>
+              </div>
+              <!-- End Modal Form -->
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-cancel"
+                  data-bs-dismiss="modal"
+                >
+                  Cancelar
+                </button>
+                <button type="submit" class="btn btn-default">
+                  Criar conta
+                </button>
+              </div>
+              <!-- End Modal Footer -->
+            </form>
+            <!-- End Form  -->
+          </div>
+        </div>
+      </div>
     </main>
+
+    <!-- Script Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

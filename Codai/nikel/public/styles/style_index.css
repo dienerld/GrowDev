@@ -17,3 +17,7 @@
   width: 50%;
   margin: 0 25%;
 }
+
+.btn-cancel {
+  border-radius: 10px;
+}
