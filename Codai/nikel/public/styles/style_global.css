@@ -24,3 +24,11 @@
   background-color: #4c79d3;
   color: #fff;
 }
+
+.logout {
+  min-width: 5rem !important;
+}
+
+.menu {
+  margin-right: 20px;
+}

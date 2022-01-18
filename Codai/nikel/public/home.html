@@ -45,7 +45,7 @@
             class="collapse navbar-collapse justify-content-end"
             id="navbarSupportedContent"
           >
-            <div class="d-flex">
+            <div class="d-flex menu">
               <a href="./home.html">
                 <button class="btn" type="button">
                   <i class="bi bi-house-fill fs-4 secondary-color"></i></button
@@ -68,9 +68,12 @@
                 >
                   <i class="bi bi-person-circle fs-4"></i>
                 </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <ul
+                  class="dropdown-menu logout"
+                  aria-labelledby="dropdownMenuButton1"
+                >
                   <li>
-                    <a class="dropdown-item" href="#">Sair</a>
+                    <button id="btn-logout" class="dropdown-item">Sair</button>
                   </li>
                 </ul>
               </div>
@@ -227,6 +230,7 @@
                     class="form-control"
                     id="value-input"
                     aria-describedby="emailHelp"
+                    required
                   />
                 </div>
 
@@ -239,13 +243,19 @@
                     type="text"
                     class="form-control"
                     id="description-input"
+                    required
                   />
                 </div>
 
                 <!-- Div Input Date -->
                 <div class="mb-3">
                   <label for="date-input" class="form-label"> Data </label>
-                  <input type="date" class="form-control" id="date-input" />
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="date-input"
+                    required
+                  />
                 </div>
 
                 <!-- Option receivables or expenses -->
@@ -307,5 +317,6 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/home.js"></script>
   </body>
 </html>
