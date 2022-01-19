@@ -6,7 +6,6 @@ let logged = sessionStorage.getItem('logged');
 let data = {
   transactions: [],
 };
-let cashOut = [];
 
 checkLogged();
 // ?create new lançament
@@ -43,6 +42,7 @@ document
   .addEventListener('click', function () {
     window.location.href = 'transactions.html';
   });
+
 // Functions
 function checkLogged() {
   if (session) {
