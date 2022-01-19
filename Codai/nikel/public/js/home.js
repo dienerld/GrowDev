@@ -33,8 +33,16 @@ document
     alert('Transação adicionada com sucesso!! ');
     event.target.reset();
     modal.hide();
+    getCashIn();
+    getCashOut();
+    getTotal();
   });
 
+document
+  .getElementById('btn-transactions')
+  .addEventListener('click', function () {
+    window.location.href = 'transactions.html';
+  });
 // Functions
 function checkLogged() {
   if (session) {
@@ -52,6 +60,8 @@ function checkLogged() {
     data = JSON.parse(dataUser);
   }
   getCashIn();
+  getCashOut();
+  getTotal();
 }
 
 function logout() {
@@ -62,8 +72,6 @@ function logout() {
 }
 
 function saveData(data) {
-  console.log(data);
-
   localStorage.setItem(data.login, JSON.stringify(data));
 }
 
@@ -81,6 +89,78 @@ function getCashIn() {
     }
     for (let index = 0; index < limit; index++) {
       console.log(cashIn[index]);
+
+      cashInHtml += `
+        <div class="row mb-4">
+          <div class="col-12">
+            <h3 class="fs-2">R$ ${cashIn[index].value.toFixed(2)}</h3>
+          </div>
+          <!-- Div Description -->
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-8">${cashIn[index].description}</div>
+              <div
+                class="col-12 col-md-3 d-flex justify-content-end"
+              >
+                ${cashIn[index].date}
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
     }
+    document.getElementById('cash-in-list').innerHTML = cashInHtml;
   }
+}
+
+function getCashOut() {
+  const transaction = data.transactions;
+  const cashOut = transaction.filter((item) => item.type === '2');
+  if (cashOut.length) {
+    let cashInHtml = ``;
+    let limit = 0;
+
+    if (cashOut.length > 5) {
+      limit = 5;
+    } else {
+      limit = cashOut.length;
+    }
+    for (let index = 0; index < limit; index++) {
+      console.log(cashOut[index]);
+
+      cashInHtml += `
+        <div class="row mb-4">
+          <div class="col-12">
+            <h3 class="fs-2">R$ ${cashOut[index].value.toFixed(2)}</h3>
+          </div>
+          <!-- Div Description -->
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-8">${cashOut[index].description}</div>
+              <div
+                class="col-12 col-md-3 d-flex justify-content-end"
+              >
+                ${cashOut[index].date}
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+    document.getElementById('cash-out-list').innerHTML = cashInHtml;
+  }
+}
+
+function getTotal() {
+  let total = 0;
+  const transaction = data.transactions;
+  transaction.forEach((item) => {
+    if (item.type === '1') {
+      total += item.value;
+    } else {
+      total -= item.value;
+    }
+  });
+
+  document.getElementById('value-total').innerHTML = `R$ ${total.toFixed(2)}`;
 }

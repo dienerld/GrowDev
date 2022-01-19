@@ -88,8 +88,9 @@
         <div class="row">
           <!-- Col total value -->
           <div class="col d-flex mt-4 justify-content-start align-items-center">
-            <i class="bi bi-cash-coin primary-color icon-detail"></i
-            ><span class="fs-2">R$ 20.000,00</span>
+            <i class="bi bi-cash-coin primary-color icon-detail"></i>
+            <!-- Valor Total -->
+            <span class="fs-2" id="value-total"></span>
           </div>
           <!-- End Col total value -->
 
@@ -135,42 +136,26 @@
               <div class="row">
                 <div class="col-6">
                   <!-- Container receivables -->
-                  <div class="container">
-                    <!-- Row receivables -->
-                    <div class="row" id="value-receivables">
-                      <div class="col fs-3">R$ 1000</div>
-                      <!-- Div Description -->
-                      <div class="row">
-                        <div class="col d-flex justify-content-between">
-                          <span class="span-description">Freela</span>
-                          <span class="span-description">20/10/2021</span>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End Row receivables -->
+                  <div class="container p-0" id="cash-in-list">
+                    <!-- Code html in js-->
                   </div>
                   <!-- End Container receivables -->
                 </div>
 
                 <div class="col-6">
                   <!-- Container 	Expenses -->
-                  <div class="container">
-                    <div class="row mb-3" id="value-expenses">
-                      <div class="col fs-3">R$ 200</div>
-                      <!-- Div Description -->
-                      <div class="row">
-                        <div class="col d-flex justify-content-between">
-                          <span class="span-description">Gasolina</span>
-                          <span class="span-description">21/12/2021</span>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="container p-0" id="cash-out-list">
+                    <!-- Code html in js-->
                   </div>
                 </div>
                 <!-- End Container 	Expenses -->
 
                 <div class="col-12 mb-3">
-                  <button type="button" class="btn btn-default">
+                  <button
+                    type="button"
+                    class="btn btn-default"
+                    id="btn-transactions"
+                  >
                     Ver mais
                   </button>
                 </div>
@@ -230,6 +215,7 @@
                     class="form-control"
                     id="value-input"
                     aria-describedby="emailHelp"
+                    step="0.01"
                     required
                   />
                 </div>
