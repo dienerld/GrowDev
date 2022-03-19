@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .tables {
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section id="table1" class="tables">
+        <table padding="4" cellspacing="0" border="1" width="400">
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+          </tr>
+          <tr align="center">
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+          </tr>
+          <tr align="right">
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="table2" class="tables">
+        <table padding="4" cellspacing="0" border="1" width="400">
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+          </tr>
+          <tr align="center">
+            <td colspan="3">4</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="table3" class="tables">
+        <table padding="4" cellspacing="0" border="1" width="400">
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td rowspan="3" align="center">3</td>
+          </tr>
+          <tr align="center">
+            <td colspan="2">4</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>6</td>
+          </tr>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>
