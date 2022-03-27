@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+header {
+  margin-top: 50px;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  height: 700px;
+  background-color: #998383;
+}
+
+.right {
+  height: 700px;
+  width: 500px;
+  background-color: #636363;
+}
+
+.select-pokemon {
+  font-size: 24px;
+  font-weight: 800;
+}
