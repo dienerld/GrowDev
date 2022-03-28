@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+}
+
+.container {
+  margin: 24px 32px;
+}
+
+.total {
+  background-color: #161616;
+  color: #fff;
+  padding: 8px;
+  border-radius: 16px;
+  text-align: right;
+}
+
+.scroll {
+  background-color: #161616;
+  color: #fff;
+  height: 80px;
+
+  margin-top: 16px;
+  padding: 8px;
+
+  text-align: left;
+  overflow: auto;
+}
