@@ -50,6 +50,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 4px 0px;
+}
+
 /* ul {
   list-style: none;
 } */
@@ -93,6 +97,7 @@ h1 {
 
 .description {
   width: 80%;
+  margin-bottom: 8px;
 }
 
 .social-media {
