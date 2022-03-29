@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  margin: 50px;
+}
+
+.a1 {
+  background-color: blue;
+  width: 400px;
+  height: 400px;
+}
+.a2 {
+  background-color: red;
+  width: 350px;
+  height: 350px;
+  position: absolute;
+  top: 75px;
+  left: 75px;
+}
+.a3 {
+  background-color: black;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+.a4 {
+  background-color: green;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 125px;
+  left: 125px;
+}
+.a5 {
+  background-color: yellow;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 150px;
+  left: 150px;
+}

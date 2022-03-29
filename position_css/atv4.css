@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  background-color: #161616;
+  margin: 5px;
+}
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.top-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 300px;
+}
+
+.top-final {
+  margin-right: 80px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
