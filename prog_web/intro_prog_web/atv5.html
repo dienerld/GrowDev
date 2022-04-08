@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./global.css" />
+  </head>
+  <body>
+    <h1>Atividade 5</h1>
+    <p>
+      5. Crie três variáveis usando let. Na primeira coloque o total de uma
+      compra. Na segunda coloque o valor recebido para pagar a compra. Apresente
+      no documento html a seguinte informação:
+      <br />
+      "Valor total da compra: R$__,__"
+      <br />
+      "Valor pago: R$__,__"
+      <br />
+      Calcule a diferença entre o valor total da compra e o valor recebido de
+      pagamento e armazene na terceira variável let. Valide o valor armazenado
+      terceira let que armazena o valor recebido pelo cliente.
+      <br />
+      - Se o valor for positivo ou zero, apresenta no documento html a mensagem:
+      "Saldo: R$__,__" <br />
+      - Se o valor for negativo ou zero, apresenta no documento html a mensagem:
+      "Troco: R$__,__"
+      <br />
+      Não deve ser mostrado o sinal de número negativo, caso o valor da terceira
+      variável let seja negativo. Deve ser mostrado sempre as 2 casas decimais
+      após a vírgula.
+    </p>
+    <script>
+      let total = 20.5;
+      let pago = 50.8;
+      let restante = (total - pago).toFixed(2);
+      document.write(`Valor total da compra: R$${total} <br/>`);
+      document.write(`Valor  pago: R$${pago} <br/>`);
+
+      if (restante >= 0) {
+        document.write(`Saldo: R$${restante}`);
+      } else {
+        document.write(`Troco: R$${-restante}`);
+      }
+    </script>
+  </body>
+</html>
