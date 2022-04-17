@@ -1,3 +1,3 @@
 # Estruturas de Repetições
 
-Atividades desenvolvida para praticar for, while e doWhile em javascript.
+Atividades desenvolvida para praticar estruturas de controle e repetições em javascript.
