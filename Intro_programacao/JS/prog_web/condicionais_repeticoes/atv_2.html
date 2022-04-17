@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./global.css" />
+  </head>
+  <body>
+    <h1>Atividade 2</h1>
+    <p>
+      2. Informe um valor a uma variável e imprima no console se o número é
+      primo.
+    </p>
+    <script>
+      const number = 9;
+      let i = 2;
+      const max_i = number / 2 + 1;
+      let isPrime = true;
+      while (max_i < i) {
+        if (number % i == 0) {
+          isPrime = false;
+          break;
+        }
+        i++;
+      }
+      if (isPrime) {
+        console.log('É Primo');
+      }
+    </script>
+  </body>
+</html>
