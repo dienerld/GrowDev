@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./global.css" />
+  </head>
+  <body>
+    <h1>Atividade 9</h1>
+    <p>
+      10. Leia um número, utilizando WHILE multiplique este número por 3
+      enquanto a soma seja menor que 500.
+    </p>
+    <script>
+      const getNumber = (message) => Number(prompt(message));
+
+      let number = getNumber();
+      let sum = 0;
+      while (sum < 500) {
+        sum += number * 3;
+      }
+
+      console.log(sum);
+    </script>
+  </body>
+</html>

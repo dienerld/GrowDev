@@ -14,16 +14,16 @@
       primo.
     </p>
     <script>
-      const number = 9;
-      let i = 2;
-      const max_i = number / 2 + 1;
+      const num = 4;
       let isPrime = true;
-      while (max_i < i) {
-        if (number % i == 0) {
+      for (let i = 2; i < num / 2 + 1; i++) {
+        if (num % i === 0) {
+          isPrime = false;
+          break;
+        } else if (num === i * i) {
           isPrime = false;
           break;
         }
-        i++;
       }
       if (isPrime) {
         console.log('É Primo');

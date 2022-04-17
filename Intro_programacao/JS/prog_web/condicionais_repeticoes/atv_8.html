@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./global.css" />
+  </head>
+  <body>
+    <h1>Atividade 8</h1>
+    <p>
+      8. Ler um valor inteiro (aceitar somente valores entre 1 e 10) e escrever
+      a tabuada de 1 a 10 do valor lido.
+    </p>
+    <script>
+      const getNumber = (message) => Number(prompt(message));
+
+      let number = getNumber();
+      while (number < 1 || number > 10) {
+        number = getNumber('Numero invalido, digite um número entre 1 e 10.');
+      }
+
+      for (let i = 0; i <= 10; i++) {
+        console.log(i * number);
+      }
+    </script>
+  </body>
+</html>

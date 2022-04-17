@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./global.css" />
+  </head>
+  <body>
+    <h1>Atividade 9</h1>
+    <p>
+      9. Escrever um algoritmo que calcule e mostre a média aritmética dos
+      números lidos entre 13 e 73.
+    </p>
+    <script>
+      const start = 13;
+      const end = 73;
+
+      let sum = 0;
+      for (let i = start; i <= end; i++) {
+        sum += i;
+      }
+
+      console.log(`Media aritmética é ${(sum / (end - start)).toFixed(2)}`);
+    </script>
+  </body>
+</html>

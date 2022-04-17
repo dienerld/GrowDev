@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./global.css" />
+  </head>
+  <body>
+    <h1>Atividade 3</h1>
+    <p>
+      3. Tendo como entrada a altura e o sexo (codificado da seguinte forma:
+      <br />1 para sexo feminino e 2 para sexo masculino) de uma pessoa,
+      construa um programa que calcule e imprima seu peso ideal, utilizando as
+      seguintes fórmulas: <br />- para homens: (72.7 * Altura) – 58 <br />- para
+      mulheres: (62.1 * Altura) <br />– 44.7 Exemplo de dados: altura = 1.88
+      sexo = 2
+    </p>
+    <script>
+      // altura e sexo(1-Mulher 2-Homem)
+      const height = 1.75;
+      const sex = 2;
+
+      // fator de subtração
+      const FSwoman = 44.7;
+      const FSman = 58;
+
+      // fator de multiplicação
+      const FMwoman = 62.1;
+      const FMman = 72.7;
+
+      if (sex === 1) {
+        console.log((FMwoman * height - FSwoman).toFixed(2));
+      } else {
+        console.log((FMman * height - FSman).toFixed(2));
+      }
+    </script>
+  </body>
+</html>
