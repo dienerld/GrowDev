@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- 3. Crie uma página HTML que tenha um botão com o texto CLIQUE
+AQUI PARA MUDAR O TEXTO e logo abaixo do botão um parágrafo
+que tenha a seguinte frase AQUI VAI APARECER ALGUMA COISA...
+
+Ao clicar no botão deve ser chamado o prompt para o usuário
+digitar o nome dele, assim que o usuário digitar o nome dele o texto
+do parágrafo deve ser alterado para "E aí
+NOME_DIGITADO_PELO_USUARIO! Você está deixando o seu site
+dinâmico."-->
+
+    <main>
+      <button onclick="changeText()">CLIQUE AQUI PARA MUDAR O TEXTO</button>
+
+      <p id="text">QUI VAI APARECER ALGUMA COISA...</p>
+    </main>
+
+    <script>
+      const dom_p = document.getElementById('text');
+
+      function changeText() {
+        const name = prompt('Digite seu nome:');
+
+        dom_p.textContent = `E aí ${name}! Você está deixando o seu site dinâmico.`;
+      }
+    </script>
+  </body>
+</html>

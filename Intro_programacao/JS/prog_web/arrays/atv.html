@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+
+
+
+8. Imprima os nomes utilizando o MAP -->
+    <script>
+      const data = [
+        {
+          nome: 'Roger Medeiros',
+          sexo: 'M',
+          salario: 3250,
+        },
+        {
+          nome: 'Carolina Silva',
+          sexo: 'F',
+          salario: 1200,
+        },
+        {
+          nome: 'Cristina Avila',
+          sexo: 'F',
+          salario: 8100,
+        },
+        {
+          nome: 'Gustavo Hoffman',
+          sexo: 'M',
+          salario: 5200.35,
+        },
+        {
+          nome: 'Eva Trindade',
+          sexo: 'F',
+          salario: 2501,
+        },
+        {
+          nome: 'Andre Mathias',
+          sexo: 'M',
+          salario: 1750,
+        },
+        {
+          nome: 'Joice Castro da Silva',
+          sexo: 'F',
+          salario: 3350.25,
+        },
+      ];
+
+      //       1. Imprima no console a quantidade de pessoas Total.
+      console.log(`Total de Pessoas: ${data.length}`);
+
+      // 2. Imprima no console a quantidade de pessoas pessoas do sexo Feminino.
+      const fem = data.filter((persons) => persons.sexo === 'F');
+      console.log(`Total de pessoas do sexo feminino: ${fem.length}`);
+
+      // 3. Imprima no console a soma do salário de todas as pessoas.
+      let sum = 0;
+      data.forEach((person) => (sum += person.salario));
+      console.log(`Soma total dos salários : ${sum}`);
+
+      // 4. Imprima no console a soma do salario de todos as pessoas do sexo Masculino
+      let sumMan = 0;
+      data.forEach((person) =>
+        person.sexo === 'M' ? (sumMan += person.salario) : null
+      );
+      console.log(`Soma dos salários de pessoas do sexo masculino : ${sumMan}`);
+
+      // 5. Utilize a função Some, para descobrir se existe algum salário
+      // superior a R$ 7.000, imprima verdadeiro no console caso exista, caso
+      // contrário falso.
+      if (data.some((person) => person.salario > 7000)) {
+        console.log('Verdadeiro');
+      } else {
+        console.log('Falso');
+      }
+
+      // 6. Utilize a função findIndex, para descobrir a posição da pessoa de
+      // nome 'Eva Trindade'.
+      const index = data.findIndex((person) => person.nome === 'Eva Trindade');
+      console.log(`Posição é: ${index}`);
+
+      // 7. Utilize a função filter, para filtrar todas pessoas que o nome possua o
+      // sobrenome "Silva".
+      const people = data.filter((person) =>
+        person.nome.split(' ').find((name) => name === 'Silva') ? person : null
+      );
+      console.log(people);
+
+      // 8. Imprima os nomes utilizando o MAP
+      data.map((person) => console.log(person.nome));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 3. Crie um objeto para colocar nome e duas notas. Atribua nome e
+duas notas para o primeiro objeto, que será nosso primeiro aluno.
+Agora crie mais um objeto para colocar informações do nosso
+segundo aluno. Mostre as informações de cada aluno no console.
+Mostre também a média do primeiro aluno e a média do segundo
+aluno. Por fim mostre a média desta turma de 2 alunos. -->
+
+    <script>
+      const students = [
+        {
+          name: 'studentA',
+          note_1: 10,
+          note_2: 10,
+        },
+        {
+          name: 'studentB',
+          note_1: 7,
+          note_2: 10,
+        },
+      ];
+
+      let totalClass = 0;
+      students.forEach((student) => {
+        for (const key in student) {
+          console.log(`${key}: ${student[key]}`);
+          if (key !== 'name') {
+            totalClass += student[key];
+          }
+        }
+      });
+
+      console.log(`Media da Classe: ${totalClass / 2}`);
+    </script>
+  </body>
+</html>

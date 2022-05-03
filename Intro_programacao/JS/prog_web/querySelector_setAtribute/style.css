@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #2b385b;
+}
+
+#container {
+  width: 100vw;
+  height: 50vh;
+  position: relative;
+  top: calc(50% - 25vh);
+  text-align: center;
+}
+
+.card {
+  width: 150px;
+  height: 200px;
+  padding: 30px;
+  margin: 20px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 30px;
+  box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.68);
+}

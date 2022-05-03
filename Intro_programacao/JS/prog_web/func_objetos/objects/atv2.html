@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <!-- 2. Crie um objeto em JavaScript para colocar 5 atributos de um
+notebook. Atribua os seguintes atributos:
+Processador = i7
+Memória = 16GB
+Preço = 5000
+HD = 1TB
+SSD = 256GB
+Por fim, utilizando o laço for in, mostre o nome e valor de cada
+atributo no console. -->
+  <body>
+    <script>
+      const notebook = {
+        Processador: 'i7',
+        Memória: '16GB',
+        Preço: 5000,
+        HD: '1TB',
+        SSD: ' 256GB',
+      };
+
+      for (const key in notebook) {
+        console.log(`${key}: ${notebook[key]}`);
+      }
+    </script>
+  </body>
+</html>

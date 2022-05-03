@@ -1,0 +1,43 @@
+<!-- 4. Crie cinco objetos JavaScript dentro de um Array contendo
+nome(texto), idade(número), skills (array), ou seja um total de cinco
+alunos. Agora crie uma função que receba estes cinco objetos e
+mais um parâmetro skill. Dependendo da skill enviada mostrar no
+console.log(), quais alunos têm a skill enviada por parâmetro,
+mostrar todo o objeto.
+Exemplo: Pedro, 24, [JavaScript, TypeScript, React]. Se mandar
+chamar a função enviando (alunos, “JavaScript”), precisa mostrar o
+Pedro e qual mais se encaixa nessa skill. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const people = [
+        { name: 'John', age: 23, skills: ['JS', 'TS', 'Java'] },
+        { name: 'Abigail', age: 20, skills: ['JS', 'TS'] },
+        { name: 'Yanne', age: 21, skills: ['JS', 'Java'] },
+        { name: 'Victor', age: 23, skills: ['TS', 'Java'] },
+        { name: 'Jose', age: 23, skills: ['React', 'TS'] },
+      ];
+
+      function select(arrPeople, skill) {
+        const selected = [];
+        arrPeople.forEach((person) => {
+          if (
+            person.skills.some((pSkill) => (pSkill === skill ? true : false))
+          ) {
+            selected.push(person);
+          }
+        });
+        return selected;
+      }
+      console.log(select(people, 'JS'));
+    </script>
+  </body>
+</html>
