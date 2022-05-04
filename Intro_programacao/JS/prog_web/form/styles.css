@@ -1,0 +1,33 @@
+html {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+#form-data-person > fieldset {
+  display: flex;
+  flex-direction: column;
+}
+fieldset {
+  margin-bottom: 24px;
+  width: 40vw;
+}
+
+#fs-person-data > input,
+select {
+  width: 50%;
+  margin-bottom: 8px;
+}
+
+#role {
+  display: flex;
+  flex-direction: row;
+}
+
+#fs-job-data {
+}
+
+div:not(:last-child) {
+  margin-bottom: 16px;
+}
