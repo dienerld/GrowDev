@@ -1,2 +1,3 @@
 Codai/nikel/assets/preview
-*.zip
+**/*.zip
+**/node_modules
