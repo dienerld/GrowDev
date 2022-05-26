@@ -8,6 +8,7 @@
 
     <style>
       * {
+        /* body { */
         margin: 0;
         padding: 0;
       }
@@ -31,19 +32,30 @@
 
       input {
         border: none;
+        font-size: 14px;
+        margin-left: 8px;
+        padding-bottom: 4px;
         outline: 0;
+        width: 95%;
       }
 
       input :focus {
         border: none;
         outline: 0;
       }
-
+      a {
+        text-decoration: none;
+        color: #000;
+      }
       fieldset {
-        /* border: 1px solid #000; */
+        border: 1px solid #000;
         border-radius: 5px;
-        padding: 8px;
         margin-bottom: 8px;
+        width: 100%;
+      }
+
+      fieldset > legend {
+        margin-left: 8px;
       }
 
       .mt-16 {
@@ -53,21 +65,18 @@
       .container {
         height: 100vh;
         width: 100vw;
-        flex-direction: column;
         justify-content: space-between;
         align-items: center;
       }
       .flex {
         display: flex;
         flex-direction: column;
+        flex-wrap: nowrap;
       }
 
       .login-external {
         margin-top: 16px;
         align-items: center;
-      }
-      .login-external :first-child {
-        margin-right: 16px;
       }
 
       .btn {
@@ -78,6 +87,14 @@
         border-radius: 5px;
         font-size: 16px;
         margin-top: 10px;
+      }
+
+      .full-line {
+        width: 100%;
+      }
+
+      .blue {
+        color: rgb(13, 57, 250);
       }
     </style>
   </head>
@@ -96,7 +113,7 @@
           </span>
         </div>
         <!-- End title -->
-
+        <!-- Btn Social Login  -->
         <div class="flex login-external">
           <div class="btn-wrapper">
             <button type="button" class="btn">
@@ -110,16 +127,22 @@
           </div>
           <a class="mt-16" href="">login with email</a>
         </div>
+        <!-- End Social Login -->
 
-        <div class="form">
+        <div class="flex mt-16 form">
           <fieldset>
             <legend>Email Address</legend>
             <input type="text" />
           </fieldset>
           <fieldset>
-            <legend>Email Address</legend>
+            <legend>Password</legend>
             <input type="text" />
           </fieldset>
+
+          <button type="submit" class="btn full-line">Login</button>
+          <a class="mt-16" href=""
+            >Don't have account?<span class="blue"> Sign up</span></a
+          >
         </div>
       </section>
     </main>
