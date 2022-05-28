@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', arial, helvetica, sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+header {
+  height: 50px;
+  width: 100vw;
+  background-color: #480361;
+  display: flex;
+  align-items: center;
+}
+
+header > img {
+  height: 40px;
+  margin-left: 16px;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  border: none;
+  font-size: 14px;
+  margin-left: 8px;
+  padding-bottom: 4px;
+  outline: 0;
+  width: 95%;
+}
+
+input :focus {
+  border: none;
+  outline: 0;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+fieldset {
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  width: 99%;
+  align-self: center;
+}
+
+fieldset > legend {
+  margin-left: 8px;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+.container {
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.login-external {
+  margin-top: 16px;
+  align-items: center;
+}
+
+.btn {
+  background-color: #480361;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.full-line {
+  width: 100%;
+}
+
+.blue {
+  color: rgb(13, 57, 250);
+}
+
+#form-wrapper {
+  margin-top: 10vh;
+}
+
+@media (max-width: 520px) {
+  .btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form {
+    width: 90%;
+  }
+}
+
+@media (max-height: 500px) {
+  #form-wrapper {
+    margin-top: 5vh;
+  }
+}
