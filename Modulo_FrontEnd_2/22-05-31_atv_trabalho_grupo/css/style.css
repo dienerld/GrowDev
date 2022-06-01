@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Marvel', sans-serif;
+  color: #fe0000;
+  text-shadow: 2px 2px 10px #000;
+}
+
+body {
+  background-color: #313435;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: url(../img/bg.jpg) no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.img-logo {
+  width: 30%;
+  height: 80%;
+  max-width: 380px;
+}
+.header-bar {
+  width: 100vw;
+  height: 60px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-bar {
+  flex: 1;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.list-menu {
+  list-style: none;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+.cartaz {
+  width: 40vw;
+  height: 30vh;
+  padding-top: 16px;
+}
+
+.dr1 {
+  height: 45vh;
+  animation: dr1 7s ease-in forwards;
+  margin: 40px;
+}
+
+.portal {
+  height: 60vh;
+  position: absolute;
+  animation: portal 7s ease-in forwards;
+}
+
+.wrapper {
+  margin-top: 32px;
+  align-items: center;
+}
+
+.date {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  opacity: 0;
+
+  background-image: linear-gradient(
+    -225deg,
+    #f7df52 0%,
+    #f7df52 29%,
+    #fe0000 67%,
+    #fe0000 100%
+  );
+  /* color: #fff; */
+
+  text-transform: uppercase;
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: date 2s linear 7s forwards;
+}
+
+@keyframes dr1 {
+  from {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1.6) translateY(-80px);
+    opacity: 1;
+  }
+}
+
+@keyframes portal {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(8640deg);
+    opacity: 0;
+  }
+}
+
+@keyframes date {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-20px);
+    background-position: 230% center;
+  }
+}
