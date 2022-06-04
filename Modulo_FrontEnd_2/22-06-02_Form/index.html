@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Bootstrap</title>
+  </head>
+  <body class="bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <form>
+            <div>
+              <label for="name">Name</label>
+              <input id="name" type="text" class="form-control" />
+            </div>
+            <!--  -->
+            <div>
+              <label for="email">E-mail</label>
+              <input
+                id="email"
+                type="email"
+                class="form-control form-control-lg"
+              />
+            </div>
+            <!--  -->
+            <div>
+              <label for="city">Cidade</label>
+              <input
+                id="city"
+                type="text"
+                class="form-control form-control-lg"
+                disabled
+              />
+            </div>
+            <!--  -->
+            <div>
+              <label for="province">Estado</label>
+              <input
+                id="province"
+                type="text"
+                class="form-control form-control-lg"
+                readonly
+              />
+            </div>
+            <!--  -->
+            <div>
+              <label for="country">País</label>
+              <input
+                id="country"
+                type="file"
+                class="form-control form-control-lg"
+              />
+            </div>
+            <!--  -->
+            <div>
+              <label for="color">País</label>
+              <input
+                id="color"
+                type="color"
+                class="form-control form-control-color"
+              />
+            </div>
+            <!--  -->
+            <div>
+              <label for="list">Fruta</label>
+              <input
+                id="list"
+                type="text"
+                list="list-frutas"
+                class="form-control"
+              />
+              <datalist id="list-frutas">
+                <option value="Banana"></option>
+                <option value="Maçã"></option>
+                <option value="Morango"></option>
+              </datalist>
+            </div>
+            <!--  -->
+            <div>
+              <label for="Senioridade">Senioridade</label>
+              <select id="Senioridade" class="form-control">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <!--  -->
+            <div>
+              <label for="Senioridade">Senioridade</label>
+              <select id="Senioridade" class="form-control" multiple>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <!--  -->
+
+            <div>
+              <label for="checkbox">Name</label>
+              <input id="checkbox" type="checkbox" class="form-check-input" />
+              <label for="checkbox1">dasdasdasdasdasdasd</label>
+              <input id="checkbox1" type="checkbox" class="form-check-input" />
+            </div>
+            <!--  -->
+            <div>
+              <label for="genero">Gênero</label>
+              <div>
+                <label for="genero">Masculino</label>
+                <input
+                  id="masc"
+                  name="genero"
+                  type="radio"
+                  class="form-check-input"
+                  value="M"
+                />
+              </div>
+              <!--  -->
+              <div>
+                <label for="genero">Feminino</label>
+                <input
+                  id="fem"
+                  name="genero"
+                  type="radio"
+                  class="form-check-input"
+                  value="F"
+                />
+              </div>
+            </div>
+
+            <!--  -->
+
+            <div>
+              <label for="">Esta Ligado</label>
+              <div class="form-check form-switch">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  role="switch"
+                  name=""
+                  id=""
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="">Range</label>
+              <input type="range" class="form-range" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

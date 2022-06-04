@@ -8,16 +8,15 @@
     <link rel="stylesheet" href="./css//bootstrap.min.css" />
     <link rel="stylesheet" href="./css//styles.css" />
   </head>
-  <body>
-    <main class="container">
+  <body class="bg-dark">
+    <main class="container bg-white">
       <header>
-        <div class="row flex-nowrap text-nowrap align-items-end">
-          <div class="col-sm-6 col-md-5 col-lg-4">
-            <h1>Titulo Destaque</h1>
-          </div>
-          <div class="col-sm-6 col-md-5 col-lg-4">
-            <h2 class="opacity-50">Com texto secundário</h2>
-          </div>
+        <div class="row">
+          <h1 class="h3">
+            Titulo Destaque
+
+            <small class="text-muted">Com texto secundário</small>
+          </h1>
         </div>
       </header>
 
@@ -51,7 +50,7 @@
             Reprehenderit architecto eius natus!
           </p>
         </div>
-        <div class="col-sm-12 col-md-5 col-lg-5 offset-2">
+        <div class="col-sm-12 col-md-5 col-lg-5 offset-md-2">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Voluptatibus fugit doloremque necessitatibus expedita numquam id
@@ -92,8 +91,8 @@
         </div>
       </section>
 
-      <section id="table" class="row mt-5">
-        <table class="table">
+      <section id="table" class="mx-3">
+        <table class="table table-striped">
           <thead class="table-dark">
             <tr>
               <th scope="col">Coluna 1</th>
@@ -126,14 +125,17 @@
       </section>
 
       <section class="row">
-        <p class="text-end fs-6">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
-          aut sapiente perferendis delectus pariatur minus voluptatibus placeat
-          fuga ipsa voluptatem deserunt iusto perspiciatis cumque eos nulla
-          fugiat, eveniet maxime tempora dolore labore inventore. Error possimus
-          aliquam, distinctio nulla quia recusandae, corporis, blanditiis
-          mollitia adipisci illo nihil repellat similique sequi. Corrupti!
-        </p>
+        <div class="col-md-10 offset-md-2">
+          <p class="fs-6 text-end">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
+            aut sapiente perferendis delectus pariatur minus voluptatibus
+            placeat fuga ipsa voluptatem deserunt iusto perspiciatis cumque eos
+            nulla fugiat, eveniet maxime tempora dolore labore inventore. Error
+            possimus aliquam, distinctio nulla quia recusandae, corporis,
+            blanditiis mollitia adipisci illo nihil repellat similique sequi.
+            Corrupti!
+          </p>
+        </div>
       </section>
     </main>
     <script src="./js/bootstrap.min.js"></script>

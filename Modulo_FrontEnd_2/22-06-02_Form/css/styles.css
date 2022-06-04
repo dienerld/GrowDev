@@ -1,0 +1,45 @@
+/* body {
+  width: 100vw;
+  height: 100vh;
+} */
+.card {
+  border-top: 5px solid #b06afc;
+}
+
+.bg-primary {
+  background: #212042 !important;
+}
+
+.color-primary {
+  color: #8f8dbf !important;
+}
+.bg-body {
+  background: #2f2461 !important;
+}
+
+.bg-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 70px;
+  background: #2a284d;
+}
+
+.bi {
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: linear-gradient(
+    135deg,
+    rgba(176, 106, 252, 1) 39%,
+    rgba(116, 17, 255, 1) 101%
+  );
+}
+
+.fs-7 {
+  font-size: 14px;
+}

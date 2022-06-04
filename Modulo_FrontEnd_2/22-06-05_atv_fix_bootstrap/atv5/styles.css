@@ -10,3 +10,31 @@
 .img {
   max-height: 250px;
 }
+
+.navbar {
+  min-width: 200px;
+  padding: 8px;
+  background-color: #ff7f50;
+}
+span.current {
+  font-weight: 700;
+}
+
+a {
+  color: rgb(27, 27, 27);
+  text-decoration: none;
+}
+
+.link-contact {
+  color: coral;
+  margin-right: 16px;
+}
+
+.social-media {
+  font-size: 24px;
+}
+
+.social-media > a {
+  margin-top: 16px;
+  margin-right: 8px;
+}
