@@ -1,10 +1,10 @@
-* {
-  font-family: 'Roboto', sans-serif;
-}
-
 .container {
   width: 100vw;
-  height: 100vh;
+  height: 100vh !important;
+}
+
+.min-height {
+  min-height: 490px !important;
 }
 
 .img {
@@ -16,6 +16,7 @@
   padding: 8px;
   background-color: #ff7f50;
 }
+
 span.current {
   font-weight: 700;
 }
@@ -37,4 +38,9 @@ a {
 .social-media > a {
   margin-top: 16px;
   margin-right: 8px;
+}
+
+#languages :not(h3) {
+  font-size: 24px;
+  margin-right: 5px;
 }
