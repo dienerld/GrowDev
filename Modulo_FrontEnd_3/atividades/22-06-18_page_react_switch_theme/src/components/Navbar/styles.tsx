@@ -10,3 +10,11 @@ export const Container = styled.div`
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 
 `;
+
+export const WrapperSwitch = styled.div`
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  width: 80px;
+  justify-content: space-between;
+`;

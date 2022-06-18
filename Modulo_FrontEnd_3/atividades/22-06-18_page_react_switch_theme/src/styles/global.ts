@@ -13,4 +13,10 @@ export default createGlobalStyle`
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
   }
+
+  #root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
 `;

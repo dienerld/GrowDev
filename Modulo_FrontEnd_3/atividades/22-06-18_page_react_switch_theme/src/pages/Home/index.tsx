@@ -1,9 +1,9 @@
+import { Container, Title } from './styles';
+
 export function Home() {
   return (
-    <>
-      <div>
-        <h1>Home</h1>
-      </div>
-    </>
+      <Container>
+        <Title>Minha primeira página com React</Title>
+      </Container>
   );
 }
