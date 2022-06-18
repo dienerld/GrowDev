@@ -4,9 +4,9 @@ module.exports = {
     es2021: true,
   },
   extends: [
+    'plugin:@typescript-eslint/recommended',
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended',
     'dienerld',
   ],
   parser: '@typescript-eslint/parser',
@@ -18,5 +18,11 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react', '@typescript-eslint'],
-  rules: {},
+  rules: {
+    // 'react/jsx-indent': [
+    //   'error',
+    //   2,
+    //   { checkAttributes: true, indentLogicalExpressions: true },
+    // ],
+  },
 };
