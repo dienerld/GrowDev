@@ -1,6 +1,8 @@
 import { SiDatabricks } from 'react-icons/si';
 import { AiOutlineCheckCircle, AiOutlineDesktop } from 'react-icons/ai';
 
+import { ThemeContext } from 'styled-components';
+import { useContext } from 'react';
 import { Thumb } from '../../components/Thumb';
 import { ContainerHome, WrapperCard, WrapperThumb } from './styles';
 import { Card } from '../../components/Card';
@@ -8,25 +10,27 @@ import { Section } from '../../components/Section';
 import { Footer } from '../../components/Footer';
 
 export function Home() {
+  const { colors } = useContext(ThemeContext);
+
   return (
     <ContainerHome>
       <Section title="Minha primeira página com React" height='300px'/>
 
       <WrapperThumb>
         <Thumb>
-          <AiOutlineDesktop size={32} color="blue"/>
+          <AiOutlineDesktop size={40} color={colors.icons.primary}/>
           <h3>Somente para desktop</h3>
           <p>Vamos aprender como utilizar um framework</p>
         </Thumb>
 
         <Thumb>
-          <SiDatabricks size={32} color="blue"/>
+          <SiDatabricks size={40} color={colors.icons.primary}/>
           <h3>Criado com componentes</h3>
           <p>Utilizamos o Styled Components</p>
         </Thumb>
 
         <Thumb>
-          <AiOutlineCheckCircle size={32} color="blue"/>
+          <AiOutlineCheckCircle size={40} color={colors.icons.primary}/>
           <h3>Fácil aproveitamento</h3>
           <p>Estamos no caminho</p>
         </Thumb>

@@ -35,9 +35,13 @@ export const WrapperCard = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 8px;
+  padding-top: 8px;
 
   text-align: left;
+  background: linear-gradient(0deg,
+      ${props => props.theme.colors.background.primary} 95%,
+      ${props => props.theme.colors.background.tertiary} 100%
+    );
 
 
   @media(max-width: 600px) {

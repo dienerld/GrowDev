@@ -7,7 +7,7 @@ export const ContainerThumb = styled.div`
   justify-content: center;
   width: 30%;
   height: 100%;
-  /* padding: 8px; */
+  gap:8px;
   min-width: 200px;
   min-height: 200px;
   text-align: center;

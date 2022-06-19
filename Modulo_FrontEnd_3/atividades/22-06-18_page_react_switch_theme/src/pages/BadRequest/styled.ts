@@ -5,7 +5,9 @@ export const ContainerBadRequest = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  height: 90vh;
+
+  /* margin-top: -60px; */
+
   overflow-x: hidden;
   overflow-y: hidden;
 

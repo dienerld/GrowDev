@@ -10,7 +10,11 @@ export const dark = {
     background: {
       primary: '#333',
       secondary: '#322f2f',
-      tertiary: '#363636'
+      tertiary: '#3a3a3c'
+    },
+
+    icons: {
+      primary: '#2187f3',
     }
   }
 };

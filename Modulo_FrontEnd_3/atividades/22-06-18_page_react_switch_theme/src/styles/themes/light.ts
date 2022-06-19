@@ -11,6 +11,9 @@ export const light = {
       primary: '#F5E8C7',
       secondary: '#f7e3b2',
       tertiary: '#e5e5e5',
+    },
+    icons: {
+      primary: '#4e4ee7',
     }
   }
 };
