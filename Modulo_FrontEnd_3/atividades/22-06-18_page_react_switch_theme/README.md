@@ -4,6 +4,10 @@ Atividade desenvolvida durante o curso Fullstack Web Developer - GrowDev.
 
 Página desenvolvida em react e typescript usando styled-components e react-router-dom.
 
+## Visualizar
+
+- ### [Clique aqui](https://dnr-first.netlify.app/)
+
 ## Execução
 
 ```bash
