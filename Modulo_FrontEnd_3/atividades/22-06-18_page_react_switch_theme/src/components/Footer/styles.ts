@@ -69,11 +69,6 @@ export const Li = styled.li<LiProps>`
     top: -4px;
   `}
 
-  a{
-    /* align-self: center; */
-    /* justify-self: center; */
-  }
-
 `;
 
 export const WrapperMediaSocial = styled.div`
