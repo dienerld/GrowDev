@@ -1,9 +1,84 @@
-import { Container, Title } from './styles';
+import { SiDatabricks } from 'react-icons/si';
+import { AiOutlineCheckCircle, AiOutlineDesktop } from 'react-icons/ai';
+
+import { Thumb } from '../../components/Thumb';
+import { ContainerHome, WrapperCard, WrapperThumb } from './styles';
+import { Card } from '../../components/Card';
+import { Section } from '../../components/Section';
+import { Footer } from '../../components/Footer';
 
 export function Home() {
   return (
-      <Container>
-        <Title>Minha primeira página com React</Title>
-      </Container>
+    <ContainerHome>
+      <Section title="Minha primeira página com React" height='300px'/>
+
+      <WrapperThumb>
+        <Thumb>
+          <AiOutlineDesktop size={32} color="blue"/>
+          <h3>Somente para desktop</h3>
+          <p>Vamos aprender como utilizar um framework</p>
+        </Thumb>
+
+        <Thumb>
+          <SiDatabricks size={32} color="blue"/>
+          <h3>Criado com componentes</h3>
+          <p>Utilizamos o Styled Components</p>
+        </Thumb>
+
+        <Thumb>
+          <AiOutlineCheckCircle size={32} color="blue"/>
+          <h3>Fácil aproveitamento</h3>
+          <p>Estamos no caminho</p>
+        </Thumb>
+      </WrapperThumb>
+
+      <WrapperCard>
+        <Card >
+          <h2>Lorem Ipsum</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Fuga totam maiores nulla nisi obcaecati eumaccusamus ad corrupti velit architecto
+            tempore, enim temporibus nemo molestiae ex atque, natus
+            excepturiadipisci culpa nesciunt praesentium iste aperiam, tenetur nam!
+            Porro nesciunt asperiores earum veniam!
+            Reiciendis doloremque incidunt dolorum expedita qui explicabo libero?
+          </p>
+        </Card>
+
+        <Card img={'/assets/iphone-unsplash.jpg'}/>
+
+        <Card img="/assets/code-unsplash.jpg"/>
+        <Card >
+          <h2>Lorem Ipsum</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Fuga totam maiores nulla nisi obcaecati eumaccusamus ad corrupti velit architecto
+            tempore, enim temporibus nemo molestiae ex atque, natus
+            excepturiadipisci culpa nesciunt praesentium iste aperiam, tenetur nam!
+            Porro nesciunt asperiores earum veniam!
+            Reiciendis doloremque incidunt dolorum expedita qui explicabo libero?
+          </p>
+        </Card>
+
+        <Card >
+          <h2>Lorem Ipsum</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Fuga totam maiores nulla nisi obcaecati eumaccusamus ad corrupti velit architecto
+            tempore, enim temporibus nemo molestiae ex atque, natus
+            excepturiadipisci culpa nesciunt praesentium iste aperiam, tenetur nam!
+            Porro nesciunt asperiores earum veniam!
+            Reiciendis doloremque incidunt dolorum expedita qui explicabo libero?
+          </p>
+        </Card>
+
+        <Card img="/assets/jenga-unsplash.jpg"/>
+      </WrapperCard>
+
+      <Section title="Contato" height='200px'/>
+
+      <Footer/>
+
+    </ContainerHome>
   );
 }

@@ -11,6 +11,7 @@ declare module 'styled-components'{
       background: {
         primary: string;
         secondary: string;
+        tertiary: string;
       }
     }
   }

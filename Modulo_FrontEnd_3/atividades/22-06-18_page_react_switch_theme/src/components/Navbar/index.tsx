@@ -4,7 +4,8 @@ import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
 import { shade } from 'polished';
 
 import { ThemeContext } from 'styled-components';
-import { Container, WrapperSwitch } from './styles';
+import { Link } from 'react-router-dom';
+import { Container, WrapperLinks, WrapperSwitch } from './styles';
 
 type NavbarProps = {
   toggleTheme(): void;
@@ -16,9 +17,10 @@ export function Navbar({ toggleTheme }: NavbarProps) {
   return (
     <nav>
       <Container>
-        <span>
-          navbar
-        </span>
+        <WrapperLinks>
+          <Link to="/">Home</Link>
+          <Link to="/about">Sobre</Link>
+        </WrapperLinks>
         <WrapperSwitch>
           <MdOutlineLightMode/>
           <Switch

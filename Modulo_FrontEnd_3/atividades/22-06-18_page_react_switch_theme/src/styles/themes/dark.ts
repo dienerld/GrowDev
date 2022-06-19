@@ -5,12 +5,12 @@ export const dark = {
     text: {
       primary: '#fff',
       secondary: '#92B4EC',
-      tertiary: '#FFD24C',
     },
 
     background: {
       primary: '#333',
-      secondary: '#1B2430',
+      secondary: '#322f2f',
+      tertiary: '#363636'
     }
   }
 };
