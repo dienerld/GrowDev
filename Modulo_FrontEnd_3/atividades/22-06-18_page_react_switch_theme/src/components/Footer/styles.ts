@@ -11,7 +11,15 @@ export const ContainerFooter = styled.footer`
   justify-content: space-between;
   height: 100px;
   width: 100%;
-  padding: 0 32px
+  padding: 16px 32px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
+
 `;
 
 export const WrapperLinks = styled.div`
@@ -26,6 +34,12 @@ export const WrapperLinks = styled.div`
       color: ${light.colors.text.secondary};
     }
   }
+
+  @media (max-width: 600px) {
+    align-items: center;
+    justify-content: center;
+  }
+
 `;
 
 export const Ul = styled.ul`
@@ -35,6 +49,10 @@ export const Ul = styled.ul`
   justify-content: space-between;
   margin-bottom: 8px;
   list-style: none;
+
+  @media (max-width: 600px) {
+    width: 90vw;
+  }
 `;
 
 type LiProps = {
@@ -44,20 +62,17 @@ type LiProps = {
 export const Li = styled.li<LiProps>`
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
   margin-right: 16px;
-  text-align: center;
-
-
-
-
 
   ${props => props.isDot && `
     position: relative;
     top: -4px;
   `}
+
+  a{
+    /* align-self: center; */
+    /* justify-self: center; */
+  }
 
 `;
 
@@ -66,4 +81,9 @@ export const WrapperMediaSocial = styled.div`
   flex-direction: row;
   gap: 20px;
   color: #2626ca;
+
+  @media (max-width: 600px) {
+    margin-top: 8px;
+  }
+
 `;
