@@ -18,7 +18,7 @@ export function StylesGlobal() {
 
       a: {
         textDecoration: 'none',
-        color: '#c3c3c3'
+        color: theme.palette.text.primary,
       }
     }}/>
   );

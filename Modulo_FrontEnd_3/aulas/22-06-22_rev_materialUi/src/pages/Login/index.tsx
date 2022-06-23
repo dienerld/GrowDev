@@ -72,11 +72,11 @@ export function Login() {
                 alignItems: 'center',
                 justifyContent: 'space-between'
               }}>
-                <LinkForm to="">
+                <LinkForm to="" color='text.primary'>
                   Esqueceu a senha?
                 </LinkForm>
 
-                <LinkForm to="">
+                <LinkForm to="" color='text.primary'>
                   Criar conta
                 </LinkForm>
               </Box>

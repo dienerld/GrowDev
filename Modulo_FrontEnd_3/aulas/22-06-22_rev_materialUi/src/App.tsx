@@ -4,13 +4,20 @@ import { Navbar } from './components/Navbar';
 import { StylesGlobal } from './config/styles/styles';
 import { darkTheme, defaultTheme } from './config/styles/themes';
 import { Routers } from './Routers';
+import { usePersistedState } from './utils/usePersistedState';
 
 function App() {
+  const [theme, setTheme] = usePersistedState('@themeMUI  ', defaultTheme);
+  const toggleTheme = () => setTheme(
+    theme.palette.mode === defaultTheme.palette.mode
+      ? darkTheme : defaultTheme
+  );
+
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <ThemeProvider theme={theme}>
       <BrowserRouter>
         <StylesGlobal/>
-        <Navbar/>
+        <Navbar toggleTheme={toggleTheme}/>
         <Routers/>
       </BrowserRouter>
     </ThemeProvider>
