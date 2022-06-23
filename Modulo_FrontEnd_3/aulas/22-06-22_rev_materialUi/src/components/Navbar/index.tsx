@@ -13,9 +13,8 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
-import { CustomLink } from './styles';
 
-const pages = ['Login', 'Pricing', 'Blog'];
+const pages = ['Login', 'Landing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 export const Navbar = () => {

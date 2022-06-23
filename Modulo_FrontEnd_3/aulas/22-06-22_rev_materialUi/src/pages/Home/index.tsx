@@ -6,17 +6,21 @@ export function Home() {
     <Grid container>
       <Grid item container xs={6}>
         <Grid item xs={12}>
-          <Typography variant='h1' color='primary'>Título</Typography>
+          <Typography variant='h1' color='text.primary' >Título</Typography>
         </Grid>
         <Grid item xs={4}>
-          <CustomPaper title='Texto 1'/>
+          <CustomPaper>
+            <Typography variant='body2' color='text.primary' >Título</Typography>
+          </CustomPaper>
         </Grid>
         <Grid item xs={4}>
-          <CustomPaper title='Texto 2'/>
+          <CustomPaper>
+            <Typography variant='body2' color='text.primary' >Título</Typography>
+          </CustomPaper>
         </Grid>
       </Grid>
       <Grid item xs={6}>
-        <Typography variant='h2' color='secondary'>Título 2</Typography>
+        <Typography variant='h2' color='text.primary'>Título 2</Typography>
       </Grid>
     </Grid>
   );

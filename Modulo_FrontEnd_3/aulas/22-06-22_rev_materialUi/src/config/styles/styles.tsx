@@ -6,8 +6,16 @@ export function StylesGlobal() {
 
   return (
     <GlobalStyles styles={{
-      width: '100vw',
-      backgroundColor: theme.palette.background.default,
+      body: {
+        width: '100vw',
+        height: '100vh',
+        backgroundColor: theme.palette.background.default,
+        margin: 0,
+        padding: 0,
+        display: 'flex',
+        flexDirection: 'column',
+      },
+
       a: {
         textDecoration: 'none',
         color: '#c3c3c3'

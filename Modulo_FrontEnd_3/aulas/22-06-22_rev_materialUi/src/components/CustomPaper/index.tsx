@@ -1,14 +1,17 @@
-import { Typography } from '@mui/material';
+import React from 'react';
 import { PaperStyled } from './styles';
 
 type CustomPaperProps = {
-    title: string;
+    children?: React.ReactNode;
+    img?: string;
+    height?: string
+    width?: string
 };
 
-export function CustomPaper({ title }: CustomPaperProps) {
+export function CustomPaper({ children, img, height, width }:CustomPaperProps) {
   return (
-    <PaperStyled elevation={2}>
-      <Typography variant='body2'>{ title }</Typography>
+    <PaperStyled img={ img } height={height} width={width} color='text.primary'>
+      { children }
     </PaperStyled>
   );
 }
