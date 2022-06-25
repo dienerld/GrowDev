@@ -9,7 +9,7 @@ export function StylesGlobal() {
       body: {
         width: '100vw',
         height: '100vh',
-        backgroundColor: theme.palette.background.default,
+        // backgroundColor: theme.palette.background.default,
         margin: 0,
         padding: 0,
         display: 'flex',
@@ -19,7 +19,8 @@ export function StylesGlobal() {
       a: {
         textDecoration: 'none',
         color: theme.palette.text.primary,
-      }
-    }}/>
+      },
+    }}
+    />
   );
 }

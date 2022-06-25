@@ -7,18 +7,19 @@ import { Routers } from './Routers';
 import { usePersistedState } from './utils/usePersistedState';
 
 function App() {
-  const [theme, setTheme] = usePersistedState('@themeMUI  ', defaultTheme);
+  const [theme, setTheme] = usePersistedState('@themeMUI', defaultTheme);
+
   const toggleTheme = () => setTheme(
     theme.palette.mode === defaultTheme.palette.mode
-      ? darkTheme : defaultTheme
+      ? darkTheme : defaultTheme,
   );
 
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <StylesGlobal/>
-        <Navbar toggleTheme={toggleTheme}/>
-        <Routers/>
+        <StylesGlobal />
+        <Navbar toggleTheme={toggleTheme} />
+        <Routers />
       </BrowserRouter>
     </ThemeProvider>
   );

@@ -31,28 +31,28 @@ export const darkTheme = createTheme({
   },
   icons: {
     primary: {
-      main: '#2b583b'
-    }
-  }
+      main: '#2b583b',
+    },
+  },
 
 });
 
 export const defaultTheme = createTheme({
   palette: {
     primary: {
-      main: '#2b583b'
+      main: '#2b583b',
     },
     secondary: {
-      main: '#e16e0e  '
+      main: '#e16e0e  ',
     },
     text: {
       primary: '#1f1f1f',
-      secondary: '#3a2e2e'
+      secondary: '#3a2e2e',
     },
   },
   icons: {
     primary: {
-      main: '#2b583b'
-    }
-  }
+      main: '#2b583b',
+    },
+  },
 });
