@@ -1,18 +1,22 @@
 import { ThemeProvider } from '@mui/material';
+import { useEffect, useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { StylesGlobal } from './config/styles/styles';
 import { darkTheme, defaultTheme } from './config/styles/themes';
 import { Routers } from './Routers';
-import { usePersistedState } from './utils/usePersistedState';
+import { usePersistedTheme } from './utils/usePersistedState';
 
 function App() {
-  const [theme, setTheme] = usePersistedState('@themeMUI', defaultTheme);
+  const [nameTheme, setNameTheme] = usePersistedTheme('@themeMUI', 'light');
+  const [theme, setTheme] = useState(nameTheme === 'light' ? defaultTheme : darkTheme);
 
-  const toggleTheme = () => setTheme(
-    theme.palette.mode === defaultTheme.palette.mode
-      ? darkTheme : defaultTheme,
+  const toggleTheme = () => setNameTheme(
+    nameTheme === 'light' ? 'dark' : 'light',
   );
+  useEffect(() => {
+    setTheme(nameTheme === 'light' ? defaultTheme : darkTheme);
+  }, [nameTheme]);
 
   return (
     <ThemeProvider theme={theme}>

@@ -7,9 +7,8 @@ export function StylesGlobal() {
   return (
     <GlobalStyles styles={{
       body: {
-        width: '100vw',
         height: '100vh',
-        // backgroundColor: theme.palette.background.default,
+        backgroundColor: theme.palette.background.default,
         margin: 0,
         padding: 0,
         display: 'flex',

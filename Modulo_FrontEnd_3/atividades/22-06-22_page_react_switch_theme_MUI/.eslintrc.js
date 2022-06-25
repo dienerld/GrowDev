@@ -31,6 +31,7 @@ module.exports = {
     'import/no-unresolved': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    'object-curly-newline': ['error', { consistent: true }],
     'import/extensions': [
       'error',
       {

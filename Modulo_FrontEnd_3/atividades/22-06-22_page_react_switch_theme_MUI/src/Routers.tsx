@@ -4,7 +4,7 @@ import { Landing } from './pages/Landing';
 export function Routers() {
   return (
     <Routes>
-      <Route path="/landing" element={<Landing />} />
+      <Route path="/" element={<Landing />} />
 
     </Routes>
   );

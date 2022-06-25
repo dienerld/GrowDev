@@ -8,11 +8,11 @@ export const CardStyled = styled(Paper)({
   justifyContent: 'center',
   textAlign: 'center',
   height: '100%',
-  width: '30%',
+  // width: '30%',
   minWidth: '200px',
   minHeight: '200px',
   gap: '1rem',
-  background: 'none',
+  background: 'background.paper',
 
   '@media (max-width: 600px)': {
     width: '100%',
@@ -21,4 +21,9 @@ export const CardStyled = styled(Paper)({
     marginBottom: '8px',
   },
 
+  '@media (max-width: 900px)': {
+    flexDirection: 'column',
+    gap: '1rem',
+    width: '80%',
+  },
 });

@@ -1,7 +1,7 @@
 import { createTheme } from '@mui/material';
 
 declare module '@mui/material/styles' {
-  interface Theme {
+ export interface Theme {
     status: {
       danger: string;
     };
@@ -12,7 +12,7 @@ declare module '@mui/material/styles' {
     }
   }
   // allow configuration using `createTheme`
-  interface ThemeOptions {
+  export interface ThemeOptions {
     status?: {
       danger?: string;
     },
@@ -28,6 +28,11 @@ declare module '@mui/material/styles' {
 export const darkTheme = createTheme({
   palette: {
     mode: 'dark',
+
+    background: {
+      default: '#161616',
+      paper: '#0c0c0c',
+    },
   },
   icons: {
     primary: {
@@ -48,6 +53,10 @@ export const defaultTheme = createTheme({
     text: {
       primary: '#1f1f1f',
       secondary: '#3a2e2e',
+    },
+    background: {
+      default: '#ccc',
+      paper: '#cecdcd',
     },
   },
   icons: {

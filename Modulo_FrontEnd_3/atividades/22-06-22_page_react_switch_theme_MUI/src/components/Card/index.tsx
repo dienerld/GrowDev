@@ -1,10 +1,10 @@
-import { SxProps } from '@mui/material';
+import { SxProps, Theme } from '@mui/material';
 import React from 'react';
 import { CardStyled } from './styles';
 
 type cardProps = {
   children?: React.ReactNode;
-  sx?: SxProps;
+  sx?: SxProps<Theme>;
 }
 
 export function Card({ children, sx }: cardProps) {
