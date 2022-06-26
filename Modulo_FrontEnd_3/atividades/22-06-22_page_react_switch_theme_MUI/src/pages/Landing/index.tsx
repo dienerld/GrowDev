@@ -1,12 +1,14 @@
 /* eslint-disable import/extensions */
 import { DesktopWindowsRounded } from '@mui/icons-material';
-import { CardMedia, Grid, Typography, useTheme } from '@mui/material';
+import { CardMedia, Container, Grid, Typography, useTheme } from '@mui/material';
 import img1 from '@assets/jenga-unsplash.jpg';
 import img2 from '@assets/iphone-unsplash.jpg';
 import img3 from '@assets/code-unsplash.jpg';
+import imgOcean from '@assets/ocean.jpg';
 
 import { Card } from '../../components/Card';
 import { Section } from '../../components/Section';
+import { Footer } from '../../components/Footer';
 
 type TContent = {
   description: string;
@@ -30,8 +32,8 @@ export function Landing() {
   ];
 
   return (
-    <Grid container>
-      <Section img="@assets/ocean.jpg" height="200px">
+    <Container maxWidth="xl">
+      <Section img={imgOcean} height="200px" width="100%">
         <Typography variant="h3">
           Landing
         </Typography>
@@ -218,6 +220,16 @@ export function Landing() {
         ))}
 
       </Section>
-    </Grid>
+
+      <Section img={imgOcean} height="200px">
+        <Typography variant="h3" fontWeight="bold">
+          Contato
+        </Typography>
+      </Section>
+
+      <Section>
+        <Footer />
+      </Section>
+    </Container>
   );
 }

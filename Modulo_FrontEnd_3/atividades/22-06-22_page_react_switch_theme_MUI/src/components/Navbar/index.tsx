@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 import { Switch, useTheme } from '@mui/material';
 import { MouseEvent, useState } from 'react';
 
-const pages = ['Login', 'Landing', 'Blog'];
+const pages: string[] = [];
 
 type propsNav = {
   toggleTheme: () => void,
