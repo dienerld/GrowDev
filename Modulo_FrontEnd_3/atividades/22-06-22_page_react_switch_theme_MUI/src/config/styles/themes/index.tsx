@@ -36,7 +36,7 @@ export const darkTheme = createTheme({
   },
   icons: {
     primary: {
-      main: '#2b583b',
+      main: '#ce93d8',
     },
   },
 

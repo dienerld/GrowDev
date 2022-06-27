@@ -14,7 +14,7 @@ export function CustomPaper({
   children, img, height, width, sx,
 }:CustomPaperProps) {
   return (
-    <PaperStyled img={img} height={height} width={width} color="text.primary" sx={sx}>
+    <PaperStyled img={img} height={height} width={width} sx={sx}>
       { children }
     </PaperStyled>
   );
