@@ -1,6 +1,6 @@
 /* eslint-disable import/extensions */
-import { DesktopWindowsRounded } from '@mui/icons-material';
-import { CardMedia, Container, Grid, Typography, useTheme } from '@mui/material';
+import { DataObject, DesktopWindowsRounded, Layers, TaskAlt } from '@mui/icons-material';
+import { CardMedia, Container, Grid, Icon, Typography, useTheme } from '@mui/material';
 import img1 from '@assets/jenga-unsplash.jpg';
 import img2 from '@assets/iphone-unsplash.jpg';
 import img3 from '@assets/code-unsplash.jpg';
@@ -31,10 +31,26 @@ export function Landing() {
     },
   ];
 
+  const arrCards = [
+    {
+      title: 'Jenga',
+      description: 'adsdasd',
+      icon: '',
+    },
+  ];
+
   return (
     <Container maxWidth="xl">
-      <Section img={imgOcean} height="200px" width="100%">
-        <Typography variant="h3">
+      <Section
+        img={imgOcean}
+        height="200px"
+        width="100%"
+        sx={{
+          borderRadius: '0px 0px 4px 4px',
+          color: '#fff',
+        }}
+      >
+        <Typography variant="h3" fontWeight="bold">
           Landing
         </Typography>
       </Section>
@@ -58,6 +74,7 @@ export function Landing() {
             svg: {
               fontSize: '3rem',
               color: theme.icons.primary.main,
+
             },
             '@media (max-width: 600px)': {
               flexDirection: 'column',
@@ -72,16 +89,18 @@ export function Landing() {
           <Grid item sm={12} md={4} display="flex" alignItems="center" justifyContent="center">
             <Card
               sx={{
-                width: '60%',
-                '@media (min-width: 900px)': { width: '80%' },
+                width: '70%',
+                '@media (max-width: 900px)': {
+                  width: '80%',
+                },
               }}
             >
               <DesktopWindowsRounded />
-              <Typography variant="h4">
-                Desktop
+              <Typography variant="h5">
+                Responsivo
               </Typography>
               <Typography variant="body1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Aprendendo a utilizar Framework
               </Typography>
             </Card>
           </Grid>
@@ -89,18 +108,18 @@ export function Landing() {
           <Grid item sm={12} md={4} display="flex" alignItems="center" justifyContent="center">
             <Card
               sx={{
-                width: '60%',
-                '@media (min-width: 900px)': {
+                '@media (max-width: 900px)': {
                   width: '80%',
                 },
+                width: '70%',
               }}
             >
-              <DesktopWindowsRounded />
-              <Typography variant="h4">
-                Desktop
+              <Layers />
+              <Typography variant="h5">
+                Criado com components
               </Typography>
               <Typography variant="body1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Utilizado materialUi
               </Typography>
             </Card>
           </Grid>
@@ -112,22 +131,22 @@ export function Landing() {
             display="flex"
             alignItems="center"
             justifyContent="center"
-            sx={{ backgroundColor: 'palette.background' }}
           >
             <Card
               sx={{
-                width: '60%',
-                '@media (min-width: 900px)': {
+                '@media (max-width: 900px)': {
                   width: '80%',
                 },
+                width: '70%',
+                flexWrap: 'nowrap',
               }}
             >
-              <DesktopWindowsRounded />
-              <Typography variant="h4">
-                Desktop
+              <TaskAlt />
+              <Typography variant="h5">
+                Reaproveitamento de components
               </Typography>
               <Typography variant="body1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Estamos no caminho
               </Typography>
             </Card>
           </Grid>
@@ -139,6 +158,8 @@ export function Landing() {
         minHeight: '400px',
         width: '100%',
         justifyContent: 'flex-start',
+        boxShadow: 'none',
+
       }}
       >
         {arrContent.map((content: TContent, index) => (
@@ -177,7 +198,7 @@ export function Landing() {
                 },
               }}
             >
-              <Card sx={{ width: '100%' }}>
+              <Card sx={{ width: '100%', backgroundColor: 'transparent' }}>
                 <CardMedia
                   component="img"
                   src={content.img}
@@ -221,15 +242,19 @@ export function Landing() {
 
       </Section>
 
-      <Section img={imgOcean} height="200px">
+      <Section
+        img={imgOcean}
+        height="200px"
+        sx={{
+          color: '#fff',
+        }}
+      >
         <Typography variant="h3" fontWeight="bold">
           Contato
         </Typography>
       </Section>
 
-      <Section>
-        <Footer />
-      </Section>
+      <Footer height="auto" sx={{ marginTop: '0.5rem', boxShadow: '0', background: 'transparent' }} />
     </Container>
   );
 }

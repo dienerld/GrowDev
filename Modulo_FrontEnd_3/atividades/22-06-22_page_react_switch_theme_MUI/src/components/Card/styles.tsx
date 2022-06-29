@@ -1,7 +1,12 @@
-import { Paper } from '@mui/material';
+import { Paper, SxProps, Theme } from '@mui/material';
 import styled from '@emotion/styled';
+import React from 'react';
 
-export const CardStyled = styled(Paper)({
+type cardProps = {
+  sx?: SxProps<Theme>
+}
+
+export const CardStyled = styled(Paper)(({ sx }: cardProps) => ({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -26,4 +31,6 @@ export const CardStyled = styled(Paper)({
     gap: '1rem',
     width: '80%',
   },
-});
+
+  ...sx as React.CSSProperties,
+}));
