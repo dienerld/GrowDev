@@ -5,7 +5,6 @@ export function Routers() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-
     </Routes>
   );
 }

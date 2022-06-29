@@ -11,16 +11,19 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
-import { Switch } from '@mui/material';
+import { Switch, useTheme } from '@mui/material';
 
 const pages = ['Login', 'Landing', 'Blog'];
 
 type propsNav = {
-  toggleTheme: () => void,
-}
+  toggleTheme: () => void;
+};
 
 export const Navbar = ({ toggleTheme }: propsNav) => {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
+  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
+    null,
+  );
+  const theme = useTheme();
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -90,9 +93,7 @@ export const Navbar = ({ toggleTheme }: propsNav) => {
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">
-                    <Link to={page.toLowerCase()}>
-                      {page}
-                    </Link>
+                    <Link to={page.toLowerCase()}>{page}</Link>
                   </Typography>
                 </MenuItem>
               ))}
@@ -124,9 +125,7 @@ export const Navbar = ({ toggleTheme }: propsNav) => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <Link to={page.toLowerCase()}>
-                  {page}
-                </Link>
+                <Link to={page.toLowerCase()}>{page}</Link>
               </Button>
             ))}
           </Box>
@@ -135,6 +134,7 @@ export const Navbar = ({ toggleTheme }: propsNav) => {
             <Switch
               color="secondary"
               onChange={toggleTheme}
+              checked={theme.palette.mode === 'dark'}
             />
           </Box>
         </Toolbar>

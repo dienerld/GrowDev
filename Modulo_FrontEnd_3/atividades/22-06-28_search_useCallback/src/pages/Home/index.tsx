@@ -1,16 +1,18 @@
-import React from 'react';
 import { Grid } from '@mui/material';
-import Menu from '../../components/Menu';
+import { Slide } from '../../components/Slide';
 
 export function Home() {
-  const links = [
-    { title: 'Home', link: '/' },
-    { title: 'About', link: '/about' },
-  ];
+  const alignCenter = {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+  };
 
   return (
-    <Grid container>
-      <Grid item container xs={6}>
+    <Grid container sx={alignCenter}>
+      <Grid item width="100%" height="800px" sx={alignCenter}>
+        <Slide />
       </Grid>
     </Grid>
   );
