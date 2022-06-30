@@ -13,13 +13,12 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
 import { Switch, useTheme } from '@mui/material';
 
-const pages = ['Two', 'Tree', 'Four'];
-
 type propsNav = {
   toggleTheme: () => void;
+  pages: string[]
 };
 
-export const Navbar = ({ toggleTheme }: propsNav) => {
+export const Navbar = ({ toggleTheme, pages }: propsNav) => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null,
   );

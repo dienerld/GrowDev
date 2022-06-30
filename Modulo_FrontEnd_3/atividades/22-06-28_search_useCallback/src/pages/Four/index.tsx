@@ -1,12 +1,6 @@
-import {
-  Button, Box, Grid, Typography,
-} from '@mui/material';
-import {
-  useMemo, useCallback, useState, useEffect,
-} from 'react';
+/* eslint-disable max-len */
+import { Box, Grid, Typography } from '@mui/material';
 import { Slide } from '../../components/Slide';
-import { SimpleSnackbar } from '../../components/SnackBar';
-import { UseMemoComponent } from './useMemoComponent';
 
 export function Four() {
   const alignCenter = {
@@ -16,81 +10,69 @@ export function Four() {
     alignItems: 'center',
   };
 
-  const [value, setValue] = useState(0);
-  const [value1, setValue1] = useState(0);
-  const [open, setOpen] = useState(false);
-
-  // executa a  função de forma instantânea mesmo sendo refeita sempre
-  const callbackMemoized = useCallback(() => setOpen(!open), [value1, open]);
-
-  // emula um delay no 'reprocessamento' da callback
-  useEffect(() => {
-    setTimeout(() => { setValue1(value1 + 1); callbackMemoized(); }, 2000);
-  }, [value]);
-
+  const links = ['https://developerplus.com.br/hook-usecallback-no-react-native/', ' https://kinsta.com/pt/blog/usecallback-react/', 'https://medium.com/@devjpnobrega/primeiros-passos-com-react-hooks-usememo-e-usecallback-13d54da4f9ba'];
   return (
     <Grid container sx={alignCenter}>
-      <Grid item width="100%" paddingTop="2rem" sx={{ ...alignCenter, gap: '1rem' }}>
+      <Grid item width="100%" paddingTop="2rem" sx={alignCenter}>
         <Slide sx={{
           gap: '1rem',
+          alignItems: 'flex-start',
         }}
         >
           <Typography variant="h3" alignSelf="center">
-            Exemplo Prático
+            Vantagens do Hook useCallback
           </Typography>
 
-          <Box sx={{
-            ...alignCenter,
-            flexDirection: 'row',
-          }}
-          >
-            <Typography
-              variant="body1"
-              sx={{
-                marginRight: '1rem',
-              }}
-            >
-              {value}
-            </Typography>
-            <Button
-              variant="contained"
-              onClick={() => setValue(value + 1)}
-            >
-              Incremento
-            </Button>
-            <Button
-              variant="contained"
-              onClick={callbackMemoized}
-              sx={{
-                marginLeft: '8px',
-              }}
-            >
-              Trigger
-            </Button>
-          </Box>
+          <Typography variant="body1">
+            Melhora o desempenho do aplicativo, evitando renderizações e processamentos desnecessários.
+          </Typography>
 
-          <Box sx={{
-            ...alignCenter,
-            flexDirection: 'row',
-          }}
-          >
-
-            <SimpleSnackbar open={open} setOpen={setOpen} />
-
-          </Box>
-        </Slide>
-
-        <Slide>
           <Typography variant="h3" alignSelf="center">
-            Uso conjunto com useMemo
+            Desvantagens do Hook useCallback
           </Typography>
+
+          <Typography variant="body1">
+            <strong> Garbage collection:</strong> As funções que ainda não estão memorizadas serão jogadas fora pelo React para liberar espaço na memória.
+          </Typography>
+
+          <Typography variant="body1">
+            <strong> Alocação de memória:</strong> Quanto mais funções memorizadas você tiver em seu código mais memória será necessária. Para cada vez que você chamar essas funções um monte de códigos dentro do React precisará entrar em ação usando mais memória para fornecer a saída de cachê.
+          </Typography>
+
+          <Typography variant="body1">
+            <strong>Complexidade do código:</strong> Quando os Hooks são envolvidos imediatamente é elevado a complexidade do código.
+          </Typography>
+
           <Box sx={{
             ...alignCenter,
-            flexDirection: 'row',
+            marginTop: '3rem',
+            gap: '1rem',
+            position: 'relative',
+            bottom: '0',
+            alignItems: 'flex-start',
           }}
-          />
-          <UseMemoComponent />
+          >
+            <Typography variant="body1">
+              Fontes:
+            </Typography>
+            {
+              links.map((link) => (
+                <Typography
+                  variant="body1"
+                  key={link}
+                  color="#047cfc"
+                  component="a"
+                  href={link}
+                  target="_blank"
+                >
+                  {link}
+                </Typography>
+              ))
+}
+
+          </Box>
         </Slide>
+
       </Grid>
 
     </Grid>

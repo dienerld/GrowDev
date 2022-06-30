@@ -12,17 +12,18 @@ function App() {
     nameTheme === 'light' ? defaultTheme : darkTheme,
   );
 
-  const toggleTheme = () =>
-    setNameTheme(nameTheme === 'light' ? 'dark' : 'light');
+  const toggleTheme = () => setNameTheme(nameTheme === 'light' ? 'dark' : 'light');
   useEffect(() => {
     setTheme(nameTheme === 'light' ? defaultTheme : darkTheme);
   }, [nameTheme]);
+
+  const pages = ['Two', 'Tree', 'Four', 'Five'];
 
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <StylesGlobal />
-        <Navbar toggleTheme={toggleTheme} />
+        <Navbar toggleTheme={toggleTheme} pages={pages} />
         <Routers />
       </BrowserRouter>
     </ThemeProvider>

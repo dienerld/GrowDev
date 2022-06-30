@@ -2,7 +2,7 @@ import {
   Button, Box, Grid, Typography,
 } from '@mui/material';
 import {
-  useMemo, useCallback, useState, useEffect,
+  useCallback, useState, useEffect,
 } from 'react';
 
 export function UseMemoComponent() {
@@ -15,27 +15,18 @@ export function UseMemoComponent() {
   const [list, setList] = useState<number[]>([]);
   const [value, setValue] = useState(0);
   const [callback, setCallback] = useState(0);
-  const [trigger, setTrigger] = useState(true);
+  const [show, setShow] = useState(true);
 
   //  guarda o resultado do processamento da função
-  const callbackMemoized = useMemo(
-    useCallback(() => value, [callback]),
-    [callback],
-  );
-
-  // força o reprocessamento da callback
-  useEffect(() => {
-    console.log('act setCallback');
-    setCallback(callback + 1);
-  }, [value]);
+  const callbackMemoized = useCallback(() => value, [callback]);
 
   // add um novo item na lista
   useEffect(() => {
     console.log('act setList');
     const copyList = list;
-    copyList.push(callbackMemoized);
+    copyList.push(callbackMemoized());
     setList(copyList);
-  }, [trigger]);
+  }, [show]);
 
   return (
     <Grid container sx={alignCenter}>
@@ -64,14 +55,25 @@ export function UseMemoComponent() {
           <Button variant="contained" onClick={() => setValue(value + 1)}>
             Incremento
           </Button>
+
           <Button
             variant="contained"
             sx={{
               marginX: '8px',
             }}
-            onClick={() => setTrigger(!trigger)}
+            onClick={() => setCallback(callback + 1)}
           >
-            Trigger
+            update Callback
+          </Button>
+
+          <Button
+            variant="contained"
+            sx={{
+              marginX: '8px',
+            }}
+            onClick={() => setShow(!show)}
+          >
+            update list
           </Button>
 
           {list.map((item, key) => (
