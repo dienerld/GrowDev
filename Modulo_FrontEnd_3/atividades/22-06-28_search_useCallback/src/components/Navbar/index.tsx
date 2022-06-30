@@ -13,7 +13,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
 import { Switch, useTheme } from '@mui/material';
 
-const pages = ['Login', 'Landing', 'Blog'];
+const pages = ['Two', 'Tree', 'Four'];
 
 type propsNav = {
   toggleTheme: () => void;
@@ -104,7 +104,7 @@ export const Navbar = ({ toggleTheme }: propsNav) => {
             variant="h5"
             noWrap
             component="a"
-            href=""
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },

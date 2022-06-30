@@ -36,6 +36,8 @@ module.exports = {
     'import/no-unresolved': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    'import/no-absolute-path': 'off',
+
     'import/extensions': [
       'error',
       {

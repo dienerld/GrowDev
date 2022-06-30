@@ -1,22 +1,29 @@
-import { Paper, styled, SxProps } from '@mui/material';
+import {
+  Paper, styled, SxProps, Theme,
+} from '@mui/material';
 import React from 'react';
 
 type StyledPaperProps = {
-  sx?: SxProps;
+  sx?: SxProps<Theme>;
+  height?: string;
+};
+type SlideProps = {
+  sx?: SxProps<Theme>;
+  children?: React.ReactNode;
 };
 
-const StyledPaper = styled(Paper)(({ sx }: StyledPaperProps) => ({
+const StyledPaper = styled(Paper)(({ sx, height }: StyledPaperProps) => ({
   width: '80%',
-  height: '400px',
+  height: height || '100%',
 
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'center',
   alignItems: 'center',
 
+  padding: '1rem',
   ...(sx as React.CSSProperties),
 }));
 
-export function Slide() {
-  return <StyledPaper>dada</StyledPaper>;
+export function Slide({ children, sx }: SlideProps) {
+  return <StyledPaper sx={sx}>{children}</StyledPaper>;
 }
