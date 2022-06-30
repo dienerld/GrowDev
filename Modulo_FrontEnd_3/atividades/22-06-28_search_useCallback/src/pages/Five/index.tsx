@@ -6,7 +6,7 @@ import {
 } from 'react';
 import { Slide } from '../../components/Slide';
 import { SimpleSnackbar } from '../../components/SnackBar';
-import { UseMemoComponent } from './useMemoComponent';
+import { UseCallbackComponent } from './UseCallbackComponent';
 
 export function Five() {
   const alignCenter = {
@@ -89,7 +89,7 @@ export function Five() {
             flexDirection: 'row',
           }}
           />
-          <UseMemoComponent />
+          <UseCallbackComponent />
         </Slide>
       </Grid>
 

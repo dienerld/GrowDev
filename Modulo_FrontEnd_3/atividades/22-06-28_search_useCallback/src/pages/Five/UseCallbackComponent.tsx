@@ -5,7 +5,7 @@ import {
   useCallback, useState, useEffect,
 } from 'react';
 
-export function UseMemoComponent() {
+export function UseCallbackComponent() {
   const alignCenter = {
     display: 'flex',
     flexDirection: 'column',
@@ -22,7 +22,6 @@ export function UseMemoComponent() {
 
   // add um novo item na lista
   useEffect(() => {
-    console.log('act setList');
     const copyList = list;
     copyList.push(callbackMemoized());
     setList(copyList);
@@ -76,8 +75,8 @@ export function UseMemoComponent() {
             update list
           </Button>
 
-          {list.map((item, key) => (
-            <Typography key={`${key}-1`}>
+          {list.map((item) => (
+            <Typography>
               {item}
             </Typography>
           ))}
