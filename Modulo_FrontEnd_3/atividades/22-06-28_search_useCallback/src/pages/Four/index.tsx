@@ -1,4 +1,3 @@
-/* eslint-disable no-plusplus */
 import {
   Button, Box, Grid, Typography,
 } from '@mui/material';
@@ -7,6 +6,7 @@ import {
 } from 'react';
 import { Slide } from '../../components/Slide';
 import { SimpleSnackbar } from '../../components/SnackBar';
+import { UseMemoComponent } from './useMemoComponent';
 
 export function Four() {
   const alignCenter = {
@@ -15,6 +15,7 @@ export function Four() {
     justifyContent: 'center',
     alignItems: 'center',
   };
+
   const [value, setValue] = useState(0);
   const [value1, setValue1] = useState(0);
   const [open, setOpen] = useState(false);
@@ -29,10 +30,9 @@ export function Four() {
 
   return (
     <Grid container sx={alignCenter}>
-      <Grid item width="100%" paddingTop="2rem" sx={alignCenter}>
+      <Grid item width="100%" paddingTop="2rem" sx={{ ...alignCenter, gap: '1rem' }}>
         <Slide sx={{
           gap: '1rem',
-          alignItems: 'flex-start',
         }}
         >
           <Typography variant="h3" alignSelf="center">
@@ -61,8 +61,11 @@ export function Four() {
             <Button
               variant="contained"
               onClick={callbackMemoized}
+              sx={{
+                marginLeft: '8px',
+              }}
             >
-              Incremento1
+              Trigger
             </Button>
           </Box>
 
@@ -75,6 +78,18 @@ export function Four() {
             <SimpleSnackbar open={open} setOpen={setOpen} />
 
           </Box>
+        </Slide>
+
+        <Slide>
+          <Typography variant="h3" alignSelf="center">
+            Uso conjunto com useMemo
+          </Typography>
+          <Box sx={{
+            ...alignCenter,
+            flexDirection: 'row',
+          }}
+          />
+          <UseMemoComponent />
         </Slide>
       </Grid>
 

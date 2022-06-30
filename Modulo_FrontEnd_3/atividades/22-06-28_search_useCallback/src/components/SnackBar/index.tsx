@@ -7,14 +7,17 @@ import CloseIcon from '@mui/icons-material/Close';
 type props = {
   open: boolean;
   setOpen(value: boolean): void;
-}
+};
 
 export function SimpleSnackbar({ open, setOpen }: props) {
   const handleClick = () => {
     setOpen(true);
   };
 
-  const handleClose = (event: React.SyntheticEvent | Event, reason?: string) => {
+  const handleClose = (
+    event: React.SyntheticEvent | Event,
+    reason?: string,
+  ) => {
     if (reason === 'clickaway') {
       return;
     }
@@ -40,7 +43,6 @@ export function SimpleSnackbar({ open, setOpen }: props) {
 
   return (
     <div>
-      <Button onClick={handleClick}>Open simple snackbar</Button>
       <Snackbar
         open={open}
         autoHideDuration={2000}
