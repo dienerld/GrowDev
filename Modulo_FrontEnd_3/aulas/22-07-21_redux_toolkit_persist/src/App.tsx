@@ -21,7 +21,7 @@ function App() {
     setTheme(nameTheme === 'light' ? defaultTheme : darkTheme);
   }, [nameTheme]);
 
-  const pages: string[] = ['Home', 'Profile'];
+  const pages: string[] = ['Home', 'Profile', 'Products'];
 
   return (
     <Provider store={store}>

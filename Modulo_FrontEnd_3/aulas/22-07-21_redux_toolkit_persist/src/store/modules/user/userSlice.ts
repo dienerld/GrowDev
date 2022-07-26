@@ -1,10 +1,17 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+export type Post = {
+    id: number;
+    title: string;
+    text: string;
+}
+
 type TUser = {
   id: number;
   name: string;
   age: number;
+  posts: Post[];
 }
 
 type TAction = {
@@ -16,6 +23,14 @@ export const fetchUserById = createAsyncThunk('user/fetchUserById', async (id: n
   await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`)
 ).data);
 
+export const fetchPostsByUserId = createAsyncThunk(
+  'user/fetchPostsByUserId',
+  async (userId: number) => {
+    const { data } = await axios.get(`https://jsonplaceholder.typicode.com/users/${userId}/posts`);
+    return data;
+  },
+);
+
 const userSlice = createSlice({
   name: 'user',
   initialState,
@@ -25,6 +40,13 @@ const userSlice = createSlice({
       state.id = payload.id;
       state.name = payload.name;
       state.age = payload.age;
+    });
+    builder.addCase(fetchPostsByUserId.fulfilled, (state, { payload }) => {
+      state.posts = payload.map((post: any) => ({
+        id: post.id,
+        title: post.title,
+        text: post.body,
+      }));
     });
   },
 });
